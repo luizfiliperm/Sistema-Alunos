@@ -23,7 +23,7 @@ public class ListaAlunos {
         listaAlunos[pos] = new Aluno(rgm, nome);
         tamAtual++;
     }
-
+    // busca indice do aluno 
     public int buscarIndiceAluno(Long rgm){
 
         for(int i=0; i<tamAtual;i++){
@@ -33,7 +33,7 @@ public class ListaAlunos {
         return-1;
 
     }
-
+    // retornar indice do aluno 
     public Aluno retornaAluno(Long rgm){
 
         if(alunoExiste(rgm)){
@@ -42,7 +42,7 @@ public class ListaAlunos {
         return null;
     }
 
-    //método para dizer se tem aluno existente ou nn 
+    // método para dizer se tem aluno existente ou nn 
     public boolean alunoExiste(Long rgm) {
         if(buscarIndiceAluno(rgm) == -1){
             return false;
@@ -50,7 +50,8 @@ public class ListaAlunos {
             return true;
         }
     }
-
+    
+    // métdodo para remover aluno 
     public void removerAlunoPorRgm(Long rgm) {
         for (int i = 0; i < tamAtual; i++) {
             if (listaAlunos[i] != null && listaAlunos[i].getRgm().equals(rgm)) {
