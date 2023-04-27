@@ -24,13 +24,23 @@ public class ListaAlunos {
         tamAtual++;
     }
 
-    public boolean alunoExiste(Long rgm) {
-        for (int i = 0; i < tamAtual; i++) {
-            if (rgm == listaAlunos[i].getRgm()) {
-                return true;
-            }
+    public int buscarIndiceAluno(Long rgm){
+
+        for(int i=0; i<tamAtual;i++){
+            if(listaAlunos[i].getRgm().equals(rgm))
+            return i;
         }
-        return false;
+        return-1;
+
+    }
+
+    //método para dizer se tem aluno existente ou nn 
+    public boolean alunoExiste(Long rgm) {
+        if(buscarIndiceAluno(rgm) == -1){
+            return false;
+        }else{
+            return true;
+        }
     }
 
     public void removerAlunoPorRgm(Long rgm) {
@@ -45,6 +55,9 @@ public class ListaAlunos {
             }
         }
     }
+
+
+    
 }
 
 
