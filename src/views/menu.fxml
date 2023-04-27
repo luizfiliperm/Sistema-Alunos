@@ -13,9 +13,9 @@
    <children>
       <AnchorPane prefHeight="600.0" prefWidth="677.0" style="-fx-background-color: white;">
          <children>
-            <Label layoutX="383.0" layoutY="72.0" text="Colegio Corleone">
+            <Label layoutX="379.0" layoutY="81.0" text="Colegio Corleone">
                <font>
-                  <Font name="Bookman Old Style" size="48.0" />
+                  <Font name="Perpetua" size="48.0" />
                </font>
             </Label>
             <AnchorPane prefHeight="600.0" prefWidth="241.0" style="-fx-background-color: #f9f4e3;">
@@ -67,7 +67,7 @@
                   </ImageView>
                </graphic>
                <font>
-                  <Font size="18.0" />
+                  <Font name="Perpetua" size="18.0" />
                </font>
             </Button>
             <Button contentDisplay="CENTER" layoutX="286.0" layoutY="376.0" mnemonicParsing="false" prefHeight="119.0" prefWidth="223.0" style="-fx-background-color: none;" text="Lista de alunos">
