@@ -27,12 +27,12 @@
                   </ImageView>
                   <Label layoutX="97.0" layoutY="28.0" text="Usuario">
                      <font>
-                        <Font size="18.0" />
+                        <Font name="Perpetua" size="18.0" />
                      </font>
                   </Label>
                   <Button layoutX="90.0" layoutY="549.0" mnemonicParsing="false" style="-fx-background-color: none;" text="Logout" textFill="#7c7c7c">
                      <font>
-                        <Font size="14.0" />
+                        <Font name="Perpetua Bold" size="14.0" />
                      </font>
                      <cursor>
                         <Cursor fx:constant="HAND" />
@@ -52,7 +52,7 @@
                   </ImageView>
                </graphic>
                <font>
-                  <Font size="18.0" />
+                  <Font name="Perpetua" size="18.0" />
                </font>
             </Button>
             <Button contentDisplay="CENTER" layoutX="286.0" layoutY="206.0" mnemonicParsing="false" prefHeight="119.0" prefWidth="223.0" style="-fx-background-color: none;" text="Cadastrar RGM">
@@ -82,7 +82,7 @@
                   </ImageView>
                </graphic>
                <font>
-                  <Font size="18.0" />
+                  <Font name="Perpetua" size="18.0" />
                </font>
             </Button>
             <Button contentDisplay="CENTER" layoutX="579.0" layoutY="376.0" mnemonicParsing="false" prefHeight="119.0" prefWidth="223.0" style="-fx-background-color: none;" text="Sair">
@@ -97,7 +97,7 @@
                   </ImageView>
                </graphic>
                <font>
-                  <Font size="18.0" />
+                  <Font name="Perpetua" size="18.0" />
                </font>
             </Button>
          </children>
