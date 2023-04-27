@@ -1,6 +1,6 @@
 package entities;
 
-import java.util.Scanner;
+
 
 public class ListaAlunos {
 
@@ -12,7 +12,8 @@ public class ListaAlunos {
         listaAlunos = new Aluno[TAM];
         tamAtual = 0;
     }
-
+    
+    // método de cadastro de aluno
     public void cadastrarAluno(String nome, Long rgm){
     
         int pos = 0;
@@ -27,6 +28,17 @@ public class ListaAlunos {
        tamAtual++;
 
     }
+    
+    public boolean AlunoExiste(Long rgm){
+
+        for(int i=0;i<tamAtual-1;i++){
+            if(rgm==listaAlunos[i].getRgm()){
+                return true;
+            }
+        }
+        return false;
+    }
+
 
     public void removerAluno(Long rgm) {
     }
