@@ -34,6 +34,14 @@ public class ListaAlunos {
 
     }
 
+    public Aluno retornaAluno(Long rgm){
+
+        if(alunoExiste(rgm)){
+            return listaAlunos[buscarIndiceAluno(rgm)];
+        }
+        return null;
+    }
+
     //método para dizer se tem aluno existente ou nn 
     public boolean alunoExiste(Long rgm) {
         if(buscarIndiceAluno(rgm) == -1){
@@ -57,7 +65,7 @@ public class ListaAlunos {
     }
 
 
-    
+
 }
 
 
