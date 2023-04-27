@@ -11,7 +11,7 @@ public class Aluno {
 
 
     public Aluno(){}
-    
+
     public Aluno(Long rgm, String nome) {
         this.rgm = rgm;
         this.nome = nome;
@@ -29,6 +29,12 @@ public class Aluno {
     public List<String> getMaterias() {
         return materias;
     }
+    public void adicionarMateria(String materia) {
+        this.materias.add(materia);
+    }
+    
+
+
     
     
 }
