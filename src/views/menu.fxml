@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MenuController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MenuController">
    <children>
       <AnchorPane prefHeight="600.0" prefWidth="677.0" style="-fx-background-color: white;">
          <children>
@@ -40,22 +40,7 @@
                   </Button>
                </children>
             </AnchorPane>
-            <Button contentDisplay="CENTER" layoutX="579.0" layoutY="206.0" mnemonicParsing="false" prefHeight="119.0" prefWidth="223.0" style="-fx-background-color: none;" text="Cadastrar Materia">
-               <graphic>
-                  <ImageView fitHeight="148.0" fitWidth="264.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@img/Button.png" />
-                     </image>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </ImageView>
-               </graphic>
-               <font>
-                  <Font name="Perpetua" size="18.0" />
-               </font>
-            </Button>
-            <Button contentDisplay="CENTER" layoutX="286.0" layoutY="206.0" mnemonicParsing="false" prefHeight="119.0" prefWidth="223.0" style="-fx-background-color: none;" text="Cadastrar RGM">
+            <Button fx:id="btCadastrarAluno" contentDisplay="CENTER" layoutX="286.0" layoutY="206.0" mnemonicParsing="false" onAction="#cadastrarAluno" prefHeight="119.0" prefWidth="223.0" style="-fx-background-color: none;" text="Cadastrar RGM">
                <graphic>
                   <ImageView fitHeight="148.0" fitWidth="264.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -73,7 +58,22 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button contentDisplay="CENTER" layoutX="286.0" layoutY="376.0" mnemonicParsing="false" prefHeight="119.0" prefWidth="223.0" style="-fx-background-color: none;" text="Lista de alunos">
+            <Button fx:id="btCadastrarMateria" contentDisplay="CENTER" layoutX="579.0" layoutY="206.0" mnemonicParsing="false" onAction="#cadastrarMateria" prefHeight="119.0" prefWidth="223.0" style="-fx-background-color: none;" text="Cadastrar Materia">
+               <graphic>
+                  <ImageView fitHeight="148.0" fitWidth="264.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/Button.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="Perpetua" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btListaAlunos" contentDisplay="CENTER" layoutX="286.0" layoutY="376.0" mnemonicParsing="false" onAction="#ListaAlunos" prefHeight="119.0" prefWidth="223.0" style="-fx-background-color: none;" text="Lista de alunos">
                <graphic>
                   <ImageView fitHeight="148.0" fitWidth="264.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -91,7 +91,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button contentDisplay="CENTER" layoutX="579.0" layoutY="376.0" mnemonicParsing="false" prefHeight="119.0" prefWidth="223.0" style="-fx-background-color: none;" text="Sair">
+            <Button fx:id="btSair" contentDisplay="CENTER" layoutX="579.0" layoutY="376.0" mnemonicParsing="false" onAction="#sair" prefHeight="119.0" prefWidth="223.0" style="-fx-background-color: none;" text="Sair">
                <graphic>
                   <ImageView fitHeight="148.0" fitWidth="264.0" pickOnBounds="true" preserveRatio="true">
                      <image>
