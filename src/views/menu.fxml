@@ -54,6 +54,9 @@
                <font>
                   <Font name="Perpetua" size="18.0" />
                </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Button>
             <Button contentDisplay="CENTER" layoutX="286.0" layoutY="206.0" mnemonicParsing="false" prefHeight="119.0" prefWidth="223.0" style="-fx-background-color: none;" text="Cadastrar RGM">
                <graphic>
@@ -69,6 +72,9 @@
                <font>
                   <Font name="Perpetua" size="18.0" />
                </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Button>
             <Button contentDisplay="CENTER" layoutX="286.0" layoutY="376.0" mnemonicParsing="false" prefHeight="119.0" prefWidth="223.0" style="-fx-background-color: none;" text="Lista de alunos">
                <graphic>
@@ -84,6 +90,9 @@
                <font>
                   <Font name="Perpetua" size="18.0" />
                </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Button>
             <Button contentDisplay="CENTER" layoutX="579.0" layoutY="376.0" mnemonicParsing="false" prefHeight="119.0" prefWidth="223.0" style="-fx-background-color: none;" text="Sair">
                <graphic>
@@ -99,6 +108,9 @@
                <font>
                   <Font name="Perpetua" size="18.0" />
                </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Button>
          </children>
       </AnchorPane>
