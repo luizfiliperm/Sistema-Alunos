@@ -84,6 +84,7 @@
                </content>
             </ScrollPane>
             <Button fx:id="btVoltar" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#voltarParaOMenu" text="Voltar" />
+            <Button fx:id="btExcluirAluno" disable="true" layoutX="172.0" layoutY="546.0" mnemonicParsing="false" onAction="#ExcluirAlunoSelecionado" text="Exluir Aluno Selecionado" textAlignment="CENTER" />
          </children>
     </AnchorPane>
   </children>
