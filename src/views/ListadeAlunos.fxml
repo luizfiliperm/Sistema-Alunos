@@ -32,24 +32,58 @@
   OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 -->
 
-<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
 
-<VBox prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<VBox prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ListaAlunosController">
   <children>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
          <children>
-            <ToolBar layoutX="-1.0" layoutY="-4.0" prefHeight="40.0" prefWidth="907.0" style="-fx-background-color: #88b499;">
-              <items>
-                <Button alignment="CENTER_RIGHT" contentDisplay="RIGHT" mnemonicParsing="false" text="Button" />
-              </items>
-               <opaqueInsets>
-                  <Insets />
-               </opaqueInsets>
-            </ToolBar>
+            <Line endY="474.0" layoutX="450.0" layoutY="126.0" startY="-126.0" />
+            <Label layoutX="219.0" layoutY="76.0" text="RGM">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+            <Label layoutX="639.0" layoutY="76.0" text="Alunos">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+            <ScrollPane fx:id="SpRgm" layoutX="149.0" layoutY="130.0" prefHeight="404.0" prefWidth="200.0">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="471.0" prefWidth="182.0">
+                     <children>
+                        <TableView fx:id="tvRGM" layoutX="-4.0" prefHeight="502.0" prefWidth="191.0" style="-fx-background-color: none;" tableMenuButtonVisible="false">
+                           <columns>
+                              <TableColumn fx:id="cRGM" prefWidth="190.0" style="-fx-alignment: CENTER;" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </ScrollPane>
+            <ScrollPane fx:id="SpNome" layoutX="580.0" layoutY="130.0" prefHeight="404.0" prefWidth="200.0">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="471.0" prefWidth="182.0">
+                     <children>
+                        <TableView fx:id="tvNome" layoutX="-4.0" prefHeight="502.0" prefWidth="191.0" style="-fx-background-color: transparent; -fx-table-cell-border-color: transparent;" tableMenuButtonVisible="false">
+                           <columns>
+                              <TableColumn fx:id="cNome" prefWidth="190.0" style="-fx-alignment: CENTER; -fx-background-color: transparent; -fx-border-border-color: transparent;" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </ScrollPane>
+            <Button fx:id="btVoltar" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#voltarParaOMenu" text="Voltar" />
          </children>
     </AnchorPane>
   </children>

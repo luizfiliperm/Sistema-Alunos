@@ -11,6 +11,15 @@ public class ListaAlunos {
         tamAtual = 0;
     }
 
+    public Aluno[] getListaAlunos() {
+        return listaAlunos;
+    }
+    
+
+    public int getTamAtual() {
+        return tamAtual;
+    }
+
     // método de cadastro de aluno
     public void cadastrarAluno(String nome, Long rgm) {
         int pos = 0;
@@ -23,6 +32,7 @@ public class ListaAlunos {
         listaAlunos[pos] = new Aluno(rgm, nome);
         tamAtual++;
     }
+
     // busca indice do aluno 
     public int buscarIndiceAluno(Long rgm){
 
@@ -33,6 +43,7 @@ public class ListaAlunos {
         return-1;
 
     }
+
     // retornar indice do aluno 
     public Aluno retornaAluno(Long rgm){
 
