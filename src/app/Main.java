@@ -1,6 +1,7 @@
 package app;
 
 
+import entities.ListaAlunos;
 import javafx.application.Application;
 import javafx.stage.Stage;
 import javafx.fxml.FXMLLoader;
@@ -8,6 +9,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 
 public class Main extends Application{
+    public static ListaAlunos listaAlunos = new ListaAlunos();
 
     @Override
     public void start(Stage primaryStage) throws Exception {

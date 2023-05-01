@@ -12,7 +12,7 @@ import javafx.scene.Node;
 public class ScreenMethods {
     
     public void changeScreen(String path, ActionEvent event) throws IOException{
-        path = "../views/" + path;
+        path = "../views/" + path + ".fxml";
         Parent root = FXMLLoader.load(getClass().getResource(path));
         Scene scene = new Scene(root);
 
@@ -29,7 +29,7 @@ public class ScreenMethods {
     }
 
     public void openPopup(String path) throws IOException{
-        path = "../views/" + path;
+        path = "../views/" + path + ".fxml";
         Parent root = FXMLLoader.load(getClass().getResource(path));
         Scene scene = new Scene(root);
         Stage popup = new Stage();
