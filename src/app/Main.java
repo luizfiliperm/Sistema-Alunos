@@ -1,7 +1,7 @@
 package app;
 
 
-import entities.SericosGerais;
+import entities.ServicosGerais;
 import javafx.application.Application;
 import javafx.stage.Stage;
 import javafx.fxml.FXMLLoader;
@@ -9,7 +9,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 
 public class Main extends Application{
-    public static SericosGerais listaAlunos = new SericosGerais();
+    public static ServicosGerais listaAlunos = new ServicosGerais();
 
     @Override
     public void start(Stage primaryStage) throws Exception {

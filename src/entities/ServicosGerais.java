@@ -2,14 +2,14 @@ package entities;
 
 import java.util.ArrayList;
 
-public class SericosGerais {
+public class ServicosGerais {
 
     public final int TAM = 60;
     private int tamAtual;
     private Aluno[] listaAlunos;
     private ArrayList<String> materias;
 
-    public SericosGerais() {
+    public ServicosGerais() {
         listaAlunos = new Aluno[TAM];
         tamAtual = 0;
         this.materias = new ArrayList<>();
