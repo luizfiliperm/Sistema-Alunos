@@ -32,16 +32,32 @@
   OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 -->
 
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
 <VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CardAlunoController">
   <children>
-    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" style="-fx-background-color: #d4ddb1;" VBox.vgrow="ALWAYS">
          <children>
-            <Label fx:id="lbNome" layoutX="43.0" layoutY="14.0" prefHeight="17.0" prefWidth="97.0" text="Nome do Aluno" />
-            <Label fx:id="lbRgm" layoutX="43.0" layoutY="40.0" text="RGM do Aluno" />
+            <AnchorPane layoutX="190.0" layoutY="57.0" prefHeight="343.0" prefWidth="449.0" style="-fx-background-color: #FFFFFF;">
+               <children>
+                  <Label layoutX="168.0" layoutY="24.0" text="Matérias Cadastradas" />
+                  <ListView fx:id="lvMaterias" layoutX="125.0" layoutY="48.0" prefHeight="248.0" prefWidth="200.0" />
+               </children>
+            </AnchorPane>
+            <Label fx:id="lbNome" layoutX="47.0" layoutY="14.0" prefHeight="17.0" prefWidth="97.0" text="Nome do Aluno" />
+            <Label fx:id="lbRgm" layoutX="56.0" layoutY="31.0" text="RGM do Aluno" />
+            <AnchorPane layoutX="-1.0" layoutY="57.0" prefHeight="343.0" prefWidth="193.0" style="-fx-background-color: #f9f4e3;">
+               <children>
+                  <Label layoutX="42.0" layoutY="14.0" text="Matérias Disponíveis" />
+                  <ComboBox fx:id="cbMaterias" layoutX="22.0" layoutY="41.0" prefWidth="150.0" promptText="Selecionar Materia" />
+                  <Button fx:id="btAdcionarMateria" layoutX="43.0" layoutY="280.0" mnemonicParsing="false" onAction="#adcionarMateriaAoAluno" text="Adcionar Matéria" />
+               </children>
+            </AnchorPane>
          </children>
     </AnchorPane>
   </children>

@@ -95,6 +95,15 @@ public class ServicosGerais {
             return false;
         }
     }
+
+    public void adcionarMateriaAoAluno(Long rgm, String materia){
+        if(alunoExiste(rgm)){
+            if(!materiaExiste(materia)){
+                cadastrarMateria(materia);
+            }
+            listaAlunos[buscarIndiceAluno(rgm)].adicionarMateria(materia);
+        }
+    }
 }
 
 
