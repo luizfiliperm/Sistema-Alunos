@@ -24,7 +24,7 @@ public class MenuController {
 
     @FXML
     void ListaAlunos(ActionEvent event) throws IOException{
-        sm.changeScreen("ListaDeAlunos", event);
+        sm.changeScreen("ListadeAlunos", event);
     }
 
     @FXML

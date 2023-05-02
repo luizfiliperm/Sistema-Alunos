@@ -60,7 +60,7 @@ public class ListaAlunosController implements Initializable{
         Optional<ButtonType> resultado = alerta.showAndWait();
         
         if (resultado.get() == ButtonType.OK){
-            Main.listaAlunos.removerAlunoPorRgm(aluno.getRgm());
+            Main.sGerais.removerAlunoPorRgm(aluno.getRgm());
             items.remove(aluno);
         }
     }
@@ -93,8 +93,8 @@ public class ListaAlunosController implements Initializable{
         
         // Adcionando os alunos na tabela
         if(items.isEmpty()){
-            for (int i = 0; i < Main.listaAlunos.getTamAtual(); i++) {
-                items.add(Main.listaAlunos.getListaAlunos()[i]);
+            for (int i = 0; i < Main.sGerais.getTamAtual(); i++) {
+                items.add(Main.sGerais.getListaAlunos()[i]);
             }   
 
             cNome.setCellValueFactory(new PropertyValueFactory<>("nome"));
