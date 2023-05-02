@@ -1,20 +1,28 @@
 package entities;
 
-public class ListaAlunos {
+import java.util.ArrayList;
+
+public class SericosGerais {
 
     public final int TAM = 60;
     private int tamAtual;
     private Aluno[] listaAlunos;
+    private ArrayList<String> materias;
 
-    public ListaAlunos() {
+    public SericosGerais() {
         listaAlunos = new Aluno[TAM];
         tamAtual = 0;
+        this.materias = new ArrayList<>();
     }
 
     public Aluno[] getListaAlunos() {
         return listaAlunos;
     }
     
+    public ArrayList<String> getMaterias() {
+        return materias;
+    }
+
 
     public int getTamAtual() {
         return tamAtual;
@@ -76,7 +84,9 @@ public class ListaAlunos {
         }
     }
 
-
+    public void cadastrarMateria(String materia){
+        materias.add(materia);
+    }
 
 }
 
