@@ -88,6 +88,13 @@ public class ServicosGerais {
         materias.add(materia);
     }
 
+    public boolean materiaExiste(String materia){
+        if(materias.contains(materia)){
+            return true;
+        }else{
+            return false;
+        }
+    }
 }
 
 
