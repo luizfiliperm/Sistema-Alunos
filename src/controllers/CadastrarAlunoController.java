@@ -50,7 +50,7 @@ public class CadastrarAlunoController {
         }
 
         // Aluno já cadastrado
-        if(Main.listaAlunos.alunoExiste(Long.parseLong(tfRGM.getText()))){
+        if(Main.sGerais.alunoExiste(Long.parseLong(tfRGM.getText()))){
             trocarMessagem("Aluno já cadastrado");
             return false;
         }
@@ -66,7 +66,7 @@ public class CadastrarAlunoController {
         Long rgm = Long.parseLong(tfRGM.getText()) ;
         String nome = tfNome.getText();
 
-        Main.listaAlunos.cadastrarAluno(nome, rgm);
+        Main.sGerais.cadastrarAluno(nome, rgm);
         trocarMessagem("Aluno cadastrado com sucesso");
     }
 

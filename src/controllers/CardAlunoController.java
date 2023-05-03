@@ -43,7 +43,7 @@ public class CardAlunoController implements Initializable{
 
     public void atualizarLv(){
         // Atualiza a lista de matérias do aluno
-        materiasAluno = FXCollections.observableArrayList(Main.listaAlunos.retornaAluno(alunoSelecionado.getRgm()).getMaterias());
+        materiasAluno = FXCollections.observableArrayList(Main.sGerais.retornaAluno(alunoSelecionado.getRgm()).getMaterias());
         lvMaterias.setItems(materiasAluno); // seta a lista de matérias no ListView
     }
 
@@ -60,7 +60,7 @@ public class CardAlunoController implements Initializable{
         String materia = cbMaterias.getSelectionModel().getSelectedItem();
 
         // Adciona a matéria ao aluno direto na lista
-        Main.listaAlunos.adcionarMateriaAoAluno(alunoSelecionado.getRgm(), materia);
+        Main.sGerais.adcionarMateriaAoAluno(alunoSelecionado.getRgm(), materia);
 
         atualizarCB(materia);
         atualizarLv();
@@ -75,7 +75,7 @@ public class CardAlunoController implements Initializable{
         lbRgm.setText(alunoSelecionado.getRgm().toString());
 
         // Cria uma lista de matérias que o aluno não está matriculado
-        for(String materia : Main.listaAlunos.getMaterias()){
+        for(String materia : Main.sGerais.getMaterias()){
             if(!alunoSelecionado.getMaterias().contains(materia)){
                 materiasDisponiveis.add(materia);
             }

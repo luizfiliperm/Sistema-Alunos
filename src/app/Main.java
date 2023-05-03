@@ -9,7 +9,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 
 public class Main extends Application{
-    public static ServicosGerais listaAlunos = new ServicosGerais();
+    public static ServicosGerais sGerais = new ServicosGerais();
 
     @Override
     public void start(Stage primaryStage) throws Exception {

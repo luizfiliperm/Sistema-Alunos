@@ -36,7 +36,7 @@ public class CadastrarMateriaController {
                 return false;
             }
             // Matéria já cadastrada
-            if(Main.listaAlunos.materiaExiste(tfNome.getText())){
+            if(Main.sGerais.materiaExiste(tfNome.getText())){
                 trocarMessagem(tfNome.getText() + " já está cadastrada");
                 return false;
             }
@@ -50,7 +50,7 @@ public class CadastrarMateriaController {
             return;
         }
 
-        Main.listaAlunos.cadastrarMateria(tfNome.getText());
+        Main.sGerais.cadastrarMateria(tfNome.getText());
         trocarMessagem(tfNome.getText() + " cadastrada com sucesso");
     }
 
