@@ -72,6 +72,9 @@
                <font>
                   <Font name="Perpetua" size="18.0" />
                </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Button>
             <Button fx:id="btListaAlunos" contentDisplay="CENTER" layoutX="286.0" layoutY="376.0" mnemonicParsing="false" onAction="#ListaAlunos" prefHeight="119.0" prefWidth="223.0" style="-fx-background-color: none;" text="Lista de alunos">
                <graphic>
