@@ -1,6 +1,7 @@
 package app;
 
 
+import entities.FilesServices;
 import entities.ServicosGerais;
 import javafx.application.Application;
 import javafx.stage.Stage;
@@ -29,6 +30,8 @@ public class Main extends Application{
         
     }
     public static void main(String[] args) throws Exception {
+        FilesServices fs = new FilesServices();
+        fs.lerAlunosCsv();
         launch(args);
     }
 

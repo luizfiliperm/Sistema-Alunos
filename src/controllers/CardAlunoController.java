@@ -65,7 +65,7 @@ public class CardAlunoController implements Initializable{
 
         atualizarCB(materia);
         atualizarLv();
-        fs.cadastrarAlunoscsv(Main.sGerais.getListaAlunos(), Main.sGerais.getTamAtual());
+        fs.atualizarAlunosCsv(Main.sGerais.getListaAlunos(), Main.sGerais.getTamAtual());
     }
     
     

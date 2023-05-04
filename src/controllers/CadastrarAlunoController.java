@@ -71,7 +71,7 @@ public class CadastrarAlunoController {
         Main.sGerais.cadastrarAluno(nome, rgm);
         trocarMessagem("Aluno cadastrado com sucesso");
 
-        sc.cadastrarAlunoscsv(Main.sGerais.getListaAlunos(), Main.sGerais.getTamAtual());
+        sc.atualizarAlunosCsv(Main.sGerais.getListaAlunos(), Main.sGerais.getTamAtual());
     }
 
     @FXML

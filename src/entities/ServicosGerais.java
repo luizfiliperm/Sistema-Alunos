@@ -31,7 +31,7 @@ public class ServicosGerais {
     
 
 
-    // método de cadastro de aluno
+    // método de cadastro de aluno recebendo nome e rgm
     public void cadastrarAluno(String nome, Long rgm) {
         int pos = 0;
         while (pos < tamAtual && listaAlunos[pos].getRgm() < rgm) {
@@ -41,6 +41,19 @@ public class ServicosGerais {
             listaAlunos[i] = listaAlunos[i - 1];
         }
         listaAlunos[pos] = new Aluno(rgm, nome);
+        tamAtual++;
+    }
+
+    // método de cadastro de aluno recebendo um objeto aluno
+    public void cadastrarAluno(Aluno aluno){
+        int pos = 0;
+        while (pos < tamAtual && listaAlunos[pos].getRgm() < aluno.getRgm()) {
+            pos++;
+        }
+        for (int i = tamAtual; i > pos; i--) {
+            listaAlunos[i] = listaAlunos[i - 1];
+        }
+        listaAlunos[pos] = aluno;
         tamAtual++;
     }
 
