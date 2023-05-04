@@ -13,7 +13,7 @@
    <children>
       <AnchorPane prefHeight="600.0" prefWidth="677.0" style="-fx-background-color: white;">
          <children>
-            <AnchorPane layoutX="-5.0" prefHeight="606.0" prefWidth="232.0" style="-fx-background-color: #f9f4e3;">
+            <AnchorPane layoutX="-5.0" prefHeight="606.0" prefWidth="232.0" style="-fx-background-color: #d4ddb1;">
                <children>
                   <ImageView fitHeight="54.0" fitWidth="48.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -33,6 +33,21 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
+                  <Label layoutX="43.0" layoutY="111.0" text="Configuração de conta" textFill="#909090">
+                     <font>
+                        <Font name="Perpetua" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="45.0" layoutY="143.0" text="Políticas de Privacidade" textFill="#909090">
+                     <font>
+                        <Font name="Perpetua" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="43.0" layoutY="174.0" text="Ajuda" textFill="#909090">
+                     <font>
+                        <Font name="Perpetua" size="18.0" />
+                     </font>
+                  </Label>
                </children>
             </AnchorPane>
             <Button fx:id="btCadastrarAluno" contentDisplay="CENTER" layoutX="313.0" layoutY="206.0" mnemonicParsing="false" onAction="#cadastrarAluno" prefHeight="119.0" prefWidth="223.0" style="-fx-background-color: #cdb28a; -fx-background-radius: 20;" text="Cadastrar RGM">
