@@ -23,7 +23,7 @@ Se você tiver algum problema ao rodar o projeto, certifique-se de que todas as 
 O projeto Sistema de Alunos em Java com Interface Gráfica foi desenvolvido como uma atividade avaliativa da disciplina de Estrutura de Dados. O professor estabeleceu os seguintes requisitos para o projeto:
 
 - Armazenar os alunos em uma lista sequencial, com o máximo de 60 alunos.
-- Armazenar a lista de materiais para cada aluno em uma estrutura de dados sequencial.
+- Armazenar a lista de matérias para cada aluno em uma estrutura de dados sequencial.
 - Organizar os alunos na lista por ordem de RGM.
 - Permitir a exclusão de um aluno pelo seu RGM.
 - Permitir a busca de um aluno pelo seu RGM.
@@ -34,6 +34,7 @@ O projeto Sistema de Alunos em Java com Interface Gráfica foi desenvolvido como
 O Sistema de Alunos em Java com Interface Gráfica possui as seguintes funcionalidades:
 
 - Adicionar um aluno: permite adicionar um novo aluno à lista, fornecendo suas informações básicas, como nome, RGM, e lista de matérias.
+- Cadastrar as Matérias em uma lista para que elas possam ser selecionadas e adicionadas ao aluno.
 - Remover um aluno: permite remover um aluno da lista com base no seu RGM.
 - Listar todos os alunos: exibe uma lista completa de todos os alunos cadastrados, ordenados por RGM.
 - Buscar um aluno: permite pesquisar um aluno na lista com base no seu RGM.
