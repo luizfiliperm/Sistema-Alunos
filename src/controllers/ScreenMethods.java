@@ -6,6 +6,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import javafx.scene.Node;
 
@@ -18,8 +19,9 @@ public class ScreenMethods {
 
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
-        // Image icon = new Image(getClass().getResourceAsStream("../views/images/tesoura.png"));
-        // stage.getIcons().add(icon);
+        Image icon = new Image(getClass().getResourceAsStream("../views/img/logo.png")); 
+        stage.getIcons().add(icon);
+
         
 
         stage.setResizable(false);
@@ -34,8 +36,9 @@ public class ScreenMethods {
         Scene scene = new Scene(root);
         Stage popup = new Stage();
         
-        // Image icon = new Image(getClass().getResourceAsStream("../views/images/tesoura.png"));
-        // popup.getIcons().add(icon);
+        Image icon = new Image(getClass().getResourceAsStream("../views/img/logo.png")); 
+        popup.getIcons().add(icon);
+
 
         
         popup.setResizable(false);

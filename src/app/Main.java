@@ -8,6 +8,7 @@ import javafx.stage.Stage;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 
 public class Main extends Application{
     public static ServicosGerais sGerais = new ServicosGerais();
@@ -18,9 +19,9 @@ public class Main extends Application{
         Parent root = FXMLLoader.load(getClass().getResource(mainPath));
         Scene scene = new Scene(root);
 
-        // Adcionar o ícone depois
-        // Image icon = new Image(getClass().getResourceAsStream("path")); 
-        // primaryStage.getIcons().add(icon);
+        // Icon do programa
+        Image icon = new Image(getClass().getResourceAsStream("../views/img/logo.png")); 
+        primaryStage.getIcons().add(icon);
 
         primaryStage.setResizable(false);
         primaryStage.setTitle("Colegio Corleone");
