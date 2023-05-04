@@ -3,6 +3,7 @@ package controllers;
 import java.io.IOException;
 
 import app.Main;
+import entities.FilesServices;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -12,6 +13,7 @@ import javafx.scene.control.TextField;
 public class CadastrarAlunoController{
 
     public ScreenMethods sm = new ScreenMethods();
+    public FilesServices sc = new FilesServices();
 
     @FXML
     private Button btCadastrar;
@@ -84,6 +86,8 @@ public class CadastrarAlunoController{
 
         Main.sGerais.cadastrarAluno(nome, rgm);
         trocarMessagem("Aluno cadastrado com sucesso");
+
+        sc.atualizarAlunosCsv(Main.sGerais.getListaAlunos(), Main.sGerais.getTamAtual());
     }
 
     @FXML
@@ -109,4 +113,3 @@ public class CadastrarAlunoController{
 
 
 }
-// 

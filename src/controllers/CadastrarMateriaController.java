@@ -3,6 +3,7 @@ package controllers;
 import java.io.IOException;
 
 import app.Main;
+import entities.FilesServices;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -11,7 +12,7 @@ import javafx.scene.control.TextField;
 
 public class CadastrarMateriaController {
     ScreenMethods sm = new ScreenMethods();
-
+    FilesServices fs = new FilesServices();
     @FXML
     private Button btCadastrar;
 
@@ -62,6 +63,7 @@ public class CadastrarMateriaController {
 
         Main.sGerais.cadastrarMateria(tfNome.getText());
         trocarMessagem(tfNome.getText() + " cadastrada com sucesso");
+        fs.atualizarMateriasCSV(Main.sGerais.getMaterias());
     }
 
     @FXML

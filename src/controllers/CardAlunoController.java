@@ -5,6 +5,7 @@ import java.util.ResourceBundle;
 
 import app.Main;
 import entities.Aluno;
+import entities.FilesServices;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -16,7 +17,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 
 public class CardAlunoController implements Initializable{
-    
+    FilesServices fs = new FilesServices();
     @FXML
     private Button btAdcionarMateria;
 
@@ -62,6 +63,7 @@ public class CardAlunoController implements Initializable{
 
         atualizarCB(materia);
         atualizarLv();
+        fs.atualizarAlunosCsv(Main.sGerais.getListaAlunos(), Main.sGerais.getTamAtual());
     }
     
     
