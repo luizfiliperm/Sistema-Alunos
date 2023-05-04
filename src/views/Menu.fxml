@@ -7,18 +7,14 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MenuController">
    <children>
       <AnchorPane prefHeight="600.0" prefWidth="677.0" style="-fx-background-color: white;">
          <children>
-            <Label layoutX="425.0" layoutY="78.0" text="Colegio Corleone">
-               <font>
-                  <Font name="Perpetua" size="48.0" />
-               </font>
-            </Label>
-            <AnchorPane prefHeight="600.0" prefWidth="241.0" style="-fx-background-color: #f9f4e3;">
+            <AnchorPane layoutX="-5.0" prefHeight="606.0" prefWidth="232.0" style="-fx-background-color: #f9f4e3;">
                <children>
                   <ImageView fitHeight="54.0" fitWidth="48.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -40,17 +36,7 @@
                   </Button>
                </children>
             </AnchorPane>
-            <Button fx:id="btCadastrarAluno" contentDisplay="CENTER" layoutX="286.0" layoutY="206.0" mnemonicParsing="false" onAction="#cadastrarAluno" prefHeight="119.0" prefWidth="223.0" style="-fx-background-color: none;" text="Cadastrar RGM">
-               <graphic>
-                  <ImageView fitHeight="148.0" fitWidth="264.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@img/Button.png" />
-                     </image>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </ImageView>
-               </graphic>
+            <Button fx:id="btCadastrarAluno" contentDisplay="CENTER" layoutX="313.0" layoutY="206.0" mnemonicParsing="false" onAction="#cadastrarAluno" prefHeight="119.0" prefWidth="223.0" style="-fx-background-color: #cdb28a; -fx-background-radius: 20;" text="Cadastrar RGM">
                <font>
                   <Font name="Perpetua" size="18.0" />
                </font>
@@ -58,17 +44,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button fx:id="btCadastrarMateria" contentDisplay="CENTER" layoutX="579.0" layoutY="206.0" mnemonicParsing="false" onAction="#cadastrarMateria" prefHeight="119.0" prefWidth="223.0" style="-fx-background-color: none;" text="Cadastrar Materia">
-               <graphic>
-                  <ImageView fitHeight="148.0" fitWidth="264.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@img/Button.png" />
-                     </image>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </ImageView>
-               </graphic>
+            <Button fx:id="btCadastrarMateria" contentDisplay="CENTER" layoutX="594.0" layoutY="206.0" mnemonicParsing="false" onAction="#cadastrarMateria" prefHeight="119.0" prefWidth="223.0" style="-fx-background-color: #cdb28a; -fx-background-radius: 20;" text="Cadastrar Materia">
                <font>
                   <Font name="Perpetua" size="18.0" />
                </font>
@@ -76,17 +52,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button fx:id="btListaAlunos" contentDisplay="CENTER" layoutX="286.0" layoutY="376.0" mnemonicParsing="false" onAction="#ListaAlunos" prefHeight="119.0" prefWidth="223.0" style="-fx-background-color: none;" text="Lista de alunos">
-               <graphic>
-                  <ImageView fitHeight="148.0" fitWidth="264.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@img/Button.png" />
-                     </image>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </ImageView>
-               </graphic>
+            <Button fx:id="btListaAlunos" contentDisplay="CENTER" layoutX="314.0" layoutY="376.0" mnemonicParsing="false" onAction="#ListaAlunos" prefHeight="119.0" prefWidth="223.0" style="-fx-background-color: #cdb28a; -fx-background-radius: 20;" text="Lista de alunos">
                <font>
                   <Font name="Perpetua" size="18.0" />
                </font>
@@ -94,17 +60,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button fx:id="btSair" contentDisplay="CENTER" layoutX="579.0" layoutY="376.0" mnemonicParsing="false" onAction="#sair" prefHeight="119.0" prefWidth="223.0" style="-fx-background-color: none;" text="Sair">
-               <graphic>
-                  <ImageView fitHeight="148.0" fitWidth="264.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@img/Button.png" />
-                     </image>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </ImageView>
-               </graphic>
+            <Button fx:id="btSair" contentDisplay="CENTER" layoutX="594.0" layoutY="376.0" mnemonicParsing="false" onAction="#sair" prefHeight="119.0" prefWidth="223.0" style="-fx-background-color: #cdb28a; -fx-background-radius: 20;" text="Sair">
                <font>
                   <Font name="Perpetua" size="18.0" />
                </font>
@@ -112,6 +68,12 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
+            <Line endX="176.66668701171875" layoutX="575.0" layoutY="129.0" startX="-164.66665649414062" stroke="#d4ddb1" />
+            <Label layoutX="425.0" layoutY="78.0" text="Colegio Corleone">
+               <font>
+                  <Font name="Perpetua" size="48.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
    </children>

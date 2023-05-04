@@ -44,47 +44,82 @@
 
 <VBox prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ListaAlunosController">
   <children>
-    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" style="-fx-background-color: white;" VBox.vgrow="ALWAYS">
          <children>
-            <Line endY="474.0" layoutX="450.0" layoutY="126.0" startY="-126.0" />
-            <Label layoutX="219.0" layoutY="76.0" text="RGM">
+            <AnchorPane prefHeight="28.0" prefWidth="900.0" style="-fx-background-color: #b1ba8e;">
+               <children>
+                  <Label fx:id="lMessagem" alignment="CENTER" prefHeight="17.0" prefWidth="174.0" />
+                  <Button fx:id="btVoltar1" layoutX="853.0" layoutY="8.0" mnemonicParsing="false" onAction="#voltarParaOMenu" style="-fx-background-color: none;" text="Voltar">
+                     <font>
+                        <Font name="Perpetua" size="16.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="5.0" layoutY="9.0" text="Colegio Corleone">
+                     <font>
+                        <Font name="Perpetua" size="18.0" />
+                     </font>
+                  </Label>
+                  <Line endX="497.0" endY="21.0" layoutX="353.0" layoutY="23.0" startX="497.0" startY="-25.707107543945312" stroke="#d4ddb1" strokeWidth="2.0" />
+                  <Button layoutX="733.0" layoutY="7.0" mnemonicParsing="false" style="-fx-background-color: none;" text="Lista de Alunos">
+                     <font>
+                        <Font name="Perpetua" size="16.0" />
+                     </font>
+                  </Button>
+                  <Line endX="497.0" endY="22.042896270751953" layoutX="229.0" layoutY="22.0" startX="497.0" startY="-25.707107543945312" stroke="#d4ddb1" strokeWidth="2.0" />
+                  <Button layoutX="645.0" layoutY="7.0" mnemonicParsing="false" style="-fx-background-color: none;" text="Matérias">
+                     <font>
+                        <Font name="Perpetua" size="16.0" />
+                     </font>
+                  </Button>
+                  <Line endX="497.0" endY="22.0" layoutX="143.0" layoutY="22.0" startX="497.0" startY="-25.707107543945312" stroke="#d4ddb1" strokeWidth="2.0" />
+                  <Button layoutX="574.0" layoutY="8.0" mnemonicParsing="false" style="-fx-background-color: none;" text="RGM">
+                     <font>
+                        <Font name="Perpetua" size="16.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <Label layoutX="190.0" layoutY="70.0" text="RGM">
                <font>
-                  <Font size="27.0" />
+                  <Font name="Perpetua" size="36.0" />
                </font>
             </Label>
-            <Label layoutX="639.0" layoutY="76.0" text="Alunos">
+            <Label layoutX="646.0" layoutY="70.0" text="Alunos">
                <font>
-                  <Font size="27.0" />
+                  <Font name="Perpetua" size="36.0" />
                </font>
             </Label>
-            <ScrollPane fx:id="SpRgm" layoutX="149.0" layoutY="130.0" prefHeight="404.0" prefWidth="200.0">
+            <ScrollPane fx:id="SpRgm" layoutX="36.0" layoutY="130.0" prefHeight="404.0" prefWidth="381.0" style="-fx-background-color: white; -fx-border-color: #cdb28a;">
               <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="471.0" prefWidth="182.0">
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="471.0" prefWidth="182.0" style="-fx-background-color: none;">
                      <children>
-                        <TableView fx:id="tvRGM" layoutX="-4.0" prefHeight="502.0" prefWidth="191.0" style="-fx-background-color: none;" tableMenuButtonVisible="false">
+                        <TableView fx:id="tvRGM" layoutX="-4.0" prefHeight="502.0" prefWidth="381.0" style="-fx-background-color: white;" tableMenuButtonVisible="false">
                            <columns>
-                              <TableColumn fx:id="cRGM" prefWidth="190.0" style="-fx-alignment: CENTER;" />
+                              <TableColumn fx:id="cRGM" prefWidth="371.0" style="-fx-alignment: CENTER; -fx-background-color: #cdb28a;" />
                            </columns>
                         </TableView>
                      </children>
                   </AnchorPane>
               </content>
             </ScrollPane>
-            <ScrollPane fx:id="SpNome" layoutX="580.0" layoutY="130.0" prefHeight="404.0" prefWidth="200.0">
+            <ScrollPane fx:id="SpNome" layoutX="501.0" layoutY="130.0" prefHeight="404.0" prefWidth="381.0" style="-fx-background-color: white; -fx-border-color: #cdb28a;">
                <content>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="471.0" prefWidth="182.0">
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="471.0" prefWidth="182.0" style="-fx-background-color: none;">
                      <children>
-                        <TableView fx:id="tvNome" layoutX="-4.0" prefHeight="502.0" prefWidth="191.0" style="-fx-background-color: transparent; -fx-table-cell-border-color: transparent;" tableMenuButtonVisible="false">
+                        <TableView fx:id="tvNome" layoutX="-4.0" layoutY="-2.0" prefHeight="504.0" prefWidth="381.0" style="-fx-background-color: white; -fx-table-cell-border-color: transparent; -fx-font-color: black;" tableMenuButtonVisible="false">
                            <columns>
-                              <TableColumn fx:id="cNome" prefWidth="190.0" style="-fx-alignment: CENTER; -fx-background-color: transparent; -fx-border-border-color: transparent;" />
+                              <TableColumn fx:id="cNome" prefWidth="371.0" style="-fx-alignment: CENTER; -fx-background-color: #cdb28a; -fx-border-border-color: transparent;" />
                            </columns>
                         </TableView>
                      </children>
                   </AnchorPane>
                </content>
             </ScrollPane>
-            <Button fx:id="btVoltar" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#voltarParaOMenu" text="Voltar" />
-            <Button fx:id="btExcluirAluno" disable="true" layoutX="172.0" layoutY="546.0" mnemonicParsing="false" onAction="#ExcluirAlunoSelecionado" text="Exluir Aluno Selecionado" textAlignment="CENTER" />
+            <Button fx:id="btExcluirAluno" disable="true" layoutX="148.0" layoutY="546.0" mnemonicParsing="false" onAction="#ExcluirAlunoSelecionado" style="-fx-background-color: #cdb28a; -fx-background-radius: 55;" text="Exluir Aluno Selecionado" textAlignment="CENTER">
+               <font>
+                  <Font name="Perpetua" size="14.0" />
+               </font></Button>
+            <Line endY="470.0" layoutX="456.0" layoutY="130.0" startY="-84.0" stroke="#cdb28a" strokeWidth="2.0" />
          </children>
     </AnchorPane>
   </children>
