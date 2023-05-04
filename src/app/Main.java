@@ -30,8 +30,13 @@ public class Main extends Application{
         
     }
     public static void main(String[] args) throws Exception {
+        // Ler os arquivos csv
         FilesServices fs = new FilesServices();
         fs.lerAlunosCsv();
+        fs.lerMateriasCsv();
+
+
+        // Executar o programa
         launch(args);
     }
 
