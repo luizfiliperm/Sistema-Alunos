@@ -38,6 +38,8 @@
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Line?>
@@ -133,6 +135,11 @@
                   <Font name="Perpetua" size="14.0" />
                </font></Button>
             <Line endY="470.0" layoutX="456.0" layoutY="130.0" startY="-84.0" stroke="#cdb28a" strokeWidth="2.0" />
+            <ImageView fitHeight="63.0" fitWidth="72.0" layoutX="5.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/logo.png" />
+               </image>
+            </ImageView>
          </children>
     </AnchorPane>
   </children>
