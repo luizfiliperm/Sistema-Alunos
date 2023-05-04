@@ -19,6 +19,16 @@ public class CadastrarMateriaController {
     private Button btVoltar;
 
     @FXML
+    private Button btListaAlunos;
+
+    @FXML
+    private Button btMaterias;
+
+    @FXML
+    private Button btRgm;
+
+
+    @FXML
     private Label lMessagem;
 
     @FXML
@@ -57,6 +67,21 @@ public class CadastrarMateriaController {
     @FXML
     void voltarParaOMenu(ActionEvent event) throws IOException{
         sm.changeScreen("Menu", event);
+    }
+
+    @FXML
+    void changeToListaAlunos(ActionEvent event) throws IOException{
+        sm.changeScreen("ListadeAlunos", event);
+    }
+
+    @FXML
+    void changeToMaterias(ActionEvent event) throws IOException{
+        sm.changeScreen("CadastrarMateria", event);
+    }
+
+    @FXML
+    void ChangeToRgm(ActionEvent event) throws IOException{
+        sm.changeScreen("CadastrarAluno", event);
     }
 
 }

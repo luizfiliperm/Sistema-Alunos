@@ -23,7 +23,7 @@ import javafx.scene.input.MouseEvent;
 
 public class ListaAlunosController implements Initializable{
 
-    ScreenMethods sc = new ScreenMethods();
+    ScreenMethods sm = new ScreenMethods();
 
     @FXML
     private ScrollPane SpNome;
@@ -33,6 +33,15 @@ public class ListaAlunosController implements Initializable{
 
     @FXML
     private Button btExcluirAluno;
+
+    @FXML
+    private Button btListaAlunos;
+
+    @FXML
+    private Button btMaterias;
+
+    @FXML
+    private Button btRgm;
 
     @FXML
     private Button btVoltar;
@@ -67,15 +76,30 @@ public class ListaAlunosController implements Initializable{
 
     @FXML
     void voltarParaOMenu(ActionEvent event) throws IOException{
-        sc.changeScreen("Menu", event);
+        sm.changeScreen("Menu", event);
     }
 
     public void abrirCardAluno(MouseEvent event){
         try {
-            sc.openPopup("CardAluno");
+            sm.openPopup("CardAluno");
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    @FXML
+    void changeToListaAlunos(ActionEvent event) throws IOException{
+        sm.changeScreen("ListadeAlunos", event);
+    }
+
+    @FXML
+    void changeToMaterias(ActionEvent event) throws IOException{
+        sm.changeScreen("CadastrarMateria", event);
+    }
+
+    @FXML
+    void ChangeToRgm(ActionEvent event) throws IOException{
+        sm.changeScreen("CadastrarAluno", event);
     }
 
     private ObservableList<Aluno> items = FXCollections.observableArrayList();
