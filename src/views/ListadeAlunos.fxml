@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ListaAlunosController">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" style="-fx-background-color: white;" VBox.vgrow="ALWAYS">
+         <children>
+            <AnchorPane prefHeight="46.0" prefWidth="900.0" style="-fx-background-color: #b1ba8e;">
+               <children>
+                  <Label fx:id="lMessagem" alignment="CENTER" prefHeight="17.0" prefWidth="174.0" />
+                  <Button fx:id="btVoltar" layoutX="836.0" layoutY="9.0" mnemonicParsing="false" onAction="#voltarParaOMenu" prefHeight="29.0" prefWidth="61.0" style="-fx-background-color: none;" text="Voltar">
+                     <font>
+                        <Font name="Perpetua" size="16.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Label layoutX="5.0" layoutY="9.0" text="Colegio Corleone">
+                     <font>
+                        <Font name="Perpetua" size="18.0" />
+                     </font>
+                  </Label>
+                  <Line endX="497.0" endY="21.0" layoutX="341.0" layoutY="23.0" startX="497.0" startY="-25.707107543945312" stroke="#d4ddb1" strokeWidth="2.0" />
+                  <Button fx:id="btListaAlunos" layoutX="725.0" layoutY="7.0" mnemonicParsing="false" onAction="#changeToListaAlunos" style="-fx-background-color: none;" text="Lista de Alunos">
+                     <font>
+                        <Font name="Perpetua" size="16.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Line endX="497.0" endY="22.042896270751953" layoutX="225.0" layoutY="22.0" startX="497.0" startY="-25.707107543945312" stroke="#d4ddb1" strokeWidth="2.0" />
+                  <Button fx:id="btMaterias" layoutX="641.0" layoutY="7.0" mnemonicParsing="false" onAction="#changeToMaterias" style="-fx-background-color: none;" text="Matérias">
+                     <font>
+                        <Font name="Perpetua" size="16.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Line endX="497.0" endY="22.0" layoutX="139.0" layoutY="22.0" startX="497.0" startY="-25.707107543945312" stroke="#d4ddb1" strokeWidth="2.0" />
+                  <Button fx:id="btRgm" layoutX="570.0" layoutY="8.0" mnemonicParsing="false" onAction="#ChangeToRgm" style="-fx-background-color: none;" text="RGM">
+                     <font>
+                        <Font name="Perpetua" size="16.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <Label layoutX="190.0" layoutY="70.0" text="RGM">
+               <font>
+                  <Font name="Perpetua" size="36.0" />
+               </font>
+            </Label>
+            <Label layoutX="646.0" layoutY="70.0" text="Alunos">
+               <font>
+                  <Font name="Perpetua" size="36.0" />
+               </font>
+            </Label>
+            <ScrollPane fx:id="SpRgm" layoutX="36.0" layoutY="130.0" prefHeight="404.0" prefWidth="381.0" style="-fx-background-color: white; -fx-border-color: #cdb28a;">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="471.0" prefWidth="182.0" style="-fx-background-color: none;">
+                     <children>
+                        <TableView fx:id="tvRGM" layoutX="-4.0" prefHeight="502.0" prefWidth="381.0" style="-fx-background-color: white;" tableMenuButtonVisible="false">
+                           <columns>
+                              <TableColumn fx:id="cRGM" prefWidth="371.0" style="-fx-alignment: CENTER; -fx-background-color: #cdb28a;" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </ScrollPane>
+            <ScrollPane fx:id="SpNome" layoutX="501.0" layoutY="130.0" prefHeight="404.0" prefWidth="381.0" style="-fx-background-color: white; -fx-border-color: #cdb28a;">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="471.0" prefWidth="182.0" style="-fx-background-color: none;">
+                     <children>
+                        <TableView fx:id="tvNome" layoutX="-4.0" layoutY="-2.0" prefHeight="504.0" prefWidth="381.0" style="-fx-background-color: white; -fx-table-cell-border-color: transparent; -fx-font-color: black;" tableMenuButtonVisible="false">
+                           <columns>
+                              <TableColumn fx:id="cNome" prefWidth="371.0" style="-fx-alignment: CENTER; -fx-background-color: #cdb28a; -fx-border-border-color: transparent;" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </ScrollPane>
+            <Button fx:id="btExcluirAluno" disable="true" layoutX="148.0" layoutY="546.0" mnemonicParsing="false" onAction="#ExcluirAlunoSelecionado" style="-fx-background-color: #cdb28a; -fx-background-radius: 55;" text="Exluir Aluno Selecionado" textAlignment="CENTER">
+               <font>
+                  <Font name="Perpetua" size="14.0" />
+               </font></Button>
+            <Line endY="470.0" layoutX="456.0" layoutY="130.0" startY="-84.0" stroke="#cdb28a" strokeWidth="2.0" />
+            <ImageView fitHeight="63.0" fitWidth="72.0" layoutX="5.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/logo.png" />
+               </image>
+            </ImageView>
+         </children>
+    </AnchorPane>
+  </children>
+</VBox>
