@@ -19,8 +19,6 @@ public class CardAlunoController implements Initializable{
     
     @FXML
     private Button btAdcionarMateria;
-    
-    
 
     @FXML
     private ComboBox<String> cbMaterias;

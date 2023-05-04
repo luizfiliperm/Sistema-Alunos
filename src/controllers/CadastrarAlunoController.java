@@ -61,7 +61,13 @@ public class CadastrarAlunoController{
 
         // Aluno já cadastrado
         if(Main.sGerais.alunoExiste(Long.parseLong(tfRGM.getText()))){
-            trocarMessagem("Aluno já cadastrado");
+            trocarMessagem("Já tem um aluno com esse RGM!");
+            return false;
+        }
+
+        // RGM menor que 8 digitos ou maior igual a 9
+        if(tfRGM.getText().length() < 8 || tfRGM.getText().length() >= 9){
+            trocarMessagem("RGM Precisa ter 8 dígitos");
             return false;
         }
         return true;
