@@ -41,3 +41,6 @@ O Sistema de Alunos em Java com Interface Gráfica possui as seguintes funcional
 - Interface Gráfica: uma interface gráfica fácil de usar, desenvolvida com JavaFX.
 
 Todas as funcionalidades são acessíveis por meio da interface gráfica e foram implementadas usando estruturas de dados sequenciais em Java.
+
+# Vídeo Demonstração
+<iframe width="560" height="315" src="https://youtu.be/2RsvrPISLbk" frameborder="0" allowfullscreen></iframe>
