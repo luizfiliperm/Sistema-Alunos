@@ -2,6 +2,11 @@ package entities;
 
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.Scanner;
+
 
 public class FilesServices {
     
@@ -26,13 +31,30 @@ public class FilesServices {
             }
         }
     }
-   
-    public Aluno[] getListaGeral(Aluno[] listAlunos, int tamAtual) {
-        Aluno[] listaGeral = new Aluno[tamAtual];
-        for (int i = 0; i < tamAtual; i++) {
-            listaGeral[i] = listAlunos[i];
+  
+    
+    
+    
+        public Aluno[] getListaGeral() {
+            ArrayList<Aluno> listaGeral = new ArrayList<>();
+            try {
+                Scanner scanner = new Scanner(new File("ListaGeral.csv"));
+                // pula a primeira linha (cabeçalho)
+                scanner.nextLine();
+                while (scanner.hasNextLine()) {
+                    String linha = scanner.nextLine();
+                    String[] campos = linha.split(",");
+                    String rgm = campos[0];
+                    String nome = campos[1];
+                    String[] materias = campos[2].split(";");
+                    Aluno aluno = new Aluno();
+                    listaGeral.add(aluno);
+                }
+            } catch (FileNotFoundException e) {
+                System.out.println("Arquivo ListaGeral.csv não encontrado: " + e.getMessage());
+            }
+            return listaGeral.toArray(new Aluno[listaGeral.size()]);
         }
-        return listaGeral;
     }
     
-}
+

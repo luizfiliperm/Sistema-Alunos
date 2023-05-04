@@ -10,12 +10,15 @@ public class Aluno {
     private List<String> materias;
 
 
-    public Aluno(){}
+    public Aluno(String rgm2, String nome2, String[] materias2){}
 
     public Aluno(Long rgm, String nome) {
         this.rgm = rgm;
         this.nome = nome;
         this.materias = new ArrayList<>();
+    }
+
+    public Aluno() {
     }
 
     public Long getRgm() {
