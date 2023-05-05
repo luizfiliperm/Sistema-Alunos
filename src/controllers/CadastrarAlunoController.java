@@ -72,6 +72,12 @@ public class CadastrarAlunoController{
             trocarMessagem("RGM Precisa ter 8 dígitos");
             return false;
         }
+
+        // RGM Negativo
+        if(Long.parseLong(tfRGM.getText()) < 0){
+            trocarMessagem("RGM não pode ser negativo");
+            return false;
+        }
         return true;
         
     }
