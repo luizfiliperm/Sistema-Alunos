@@ -43,4 +43,4 @@ O Sistema de Alunos em Java com Interface Gráfica possui as seguintes funcional
 Todas as funcionalidades são acessíveis por meio da interface gráfica e foram implementadas usando estruturas de dados sequenciais em Java.
 
 # Vídeo Demonstração
-Link: https://youtu.be/2RsvrPISLbk
+https://user-images.githubusercontent.com/79930607/236708825-7cf7e34a-f5a4-4fda-ab26-d8df6d135f79.mp4
